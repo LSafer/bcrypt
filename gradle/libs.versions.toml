@@ -1,0 +1,13 @@
+[versions]
+kotlin = "2.3.20"
+kotlinx-browser = "0.5.0"
+kotlinx-coroutines = "1.10.2"
+
+[plugins]
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+
+vanniktech-mavenPublish = { id = "com.vanniktech.maven.publish", version = "0.35.0" }
+
+[libraries]
+kotlinx-browser = { module = "org.jetbrains.kotlinx:kotlinx-browser", version.ref = "kotlinx-browser" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
