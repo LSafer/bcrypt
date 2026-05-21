@@ -1,3 +1,3 @@
 package net.lsafer.bcrypt
 
-internal actual val bcrypt: BCrypt = WebBCrypt
+actual val bcrypt: BCrypt = WebBCrypt
