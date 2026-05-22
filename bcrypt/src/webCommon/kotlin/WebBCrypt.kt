@@ -33,7 +33,7 @@ object WebBCrypt : BCrypt {
         val costString = cost.toString().padStart(2, '0')
         val saltString = encodeRadix64(salt).decodeToString()
         val config = "$2a$${costString}$${saltString}"
-        return bcryptjs.hashSync(password, config) as String
+        return bcryptjs.hashSync(password, config)
     }
 
     override fun test(password: String, hash: String): Boolean {
