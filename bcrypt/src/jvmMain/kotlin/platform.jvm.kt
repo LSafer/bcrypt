@@ -1,3 +1,3 @@
 package net.lsafer.bcrypt
 
-actual val bcrypt: BCrypt = JvmBCrypt
+internal actual val platformBCrypt: BCrypt = JvmBCrypt

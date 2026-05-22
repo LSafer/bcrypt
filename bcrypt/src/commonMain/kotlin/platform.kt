@@ -1,3 +1,3 @@
 package net.lsafer.bcrypt
 
-expect val bcrypt: BCrypt
+internal expect val platformBCrypt: BCrypt

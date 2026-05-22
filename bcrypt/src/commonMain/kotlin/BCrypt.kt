@@ -3,6 +3,8 @@ package net.lsafer.bcrypt
 import kotlin.random.Random
 
 interface BCrypt {
+    companion object : BCrypt by platformBCrypt
+
     fun newSalt(): ByteArray
 
     fun newSalt(random: Random): ByteArray
