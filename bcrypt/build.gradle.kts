@@ -34,7 +34,6 @@ kotlin {
     }
     sourceSets.named("webCommon").dependencies {
         implementation(libs.kotlinx.browser)
-        implementation(npm("bcryptjs", "^3.0.2"))
     }
 }
 

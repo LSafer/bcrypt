@@ -25,7 +25,7 @@ dependencies {
 
 ### Browser Setup
 
-Due to packaging problems. BCrypt in the browser may require adding this:
+Due to packaging problems. BCrypt in the browser requires adding this:
 
 ```html
 <script src="https://unpkg.com/bcryptjs@3.0.3/umd/index.js"

@@ -3,7 +3,7 @@ package net.lsafer.bcrypt
 import kotlin.random.Random
 
 @OptIn(ExperimentalWasmJsInterop::class)
-private val bcryptjs: BCryptJS = js("require('bcryptjs') || window.bcrypt")
+private val bcryptjs: BCryptJS = js("window.bcrypt")
 
 private external interface BCryptJS {
     fun genSaltSync(rounds: Int): String
