@@ -1,14 +1,11 @@
 package net.lsafer.bcrypt
 
-import kotlin.js.ExperimentalWasmJsInterop
-import kotlin.js.js
 import kotlin.random.Random
 
 @OptIn(ExperimentalWasmJsInterop::class)
-// stupid library that works; salt := salt + rounds
-private val bcryptjs: BCryptJS = js("require('bcryptjs')")
+private val bcryptjs: BCryptJS = js("require('bcryptjs') || window.bcrypt")
 
-external interface BCryptJS {
+private external interface BCryptJS {
     fun genSaltSync(rounds: Int): String
     fun hashSync(password: String, salt: String): String
     fun hashSync(password: String, salt: String, rounds: Int): String
